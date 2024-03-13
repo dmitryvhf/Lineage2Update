@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Old VB.NET projects. Source for migration
+HttpUpdate
+HttpUpdateGenerator
