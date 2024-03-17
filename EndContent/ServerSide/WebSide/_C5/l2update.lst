@@ -1,0 +1,21 @@
+[Update Time]
+-8590534540645713308
+[Critical Updates]
+1
+system\commandname-e.dat fe9b73549d7cffbb352c87580e9929f0
+[Full Updates]
+3
+system\ActionName-e.dat fd2cd52248fb134a2c620d56e79e56f5
+system\ALAudio.int 59eacad27cf1197c12736ca87d0b48e4
+system\commandname-e.dat fe9b73549d7cffbb352c87580e9929f0
+[AuthKey]
+[Self Update]
+6cba995c2129133649f69f8d29377ddf
+[Settings]
+CustomExec	System\L2.exe
+CheckAlways	1
+CustomExecCloseAfterStart	0
+ServerAuthIP	0.0.0.0
+GameGuardIP	1.1.1.1
+UseGameGuardIP	0
+CustomUpdateFilesPath	http://mysite/download/l2updates/

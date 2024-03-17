@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+<meta HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+<meta HTTP-EQUIV="Expires" CONTENT="-1">
+<title>Lineage II Automatic Update</title>
+<script language="javascript">
+<!--
+	var pix = new Array("updater_revision/images/remix_contest.jpg","updater_revision/images/heavy_medal.jpg","updater_revision/images/radio_new.jpg","updater_revision/images/plaync_new.jpg");
+	var urls = new Array("http://www.lineage2.com/archive/2006/09/lineage_ii_remi.html","http://www.lineage2.com/archive/2006/09/heavy_medal_1.html","http://www.lineageradio.com","http://www.lineage2.com/news/news.html#a007598");
+	var alts = new Array("Lineage II Remix Contest","Heavy Medal","Lineage Radio","Notice from PlayNC");
+	var numbers = new Array("updater_revision/images/num_1.gif", "updater_revision/images/num_2.gif", "updater_revision/images/num_3.gif", "updater_revision/images/num_4.gif");
+	var pause = false;
+	/* Image Preloading */
+	var a = new Image(); a.src = 'updater_revision/images/remix_contest.jpg';	var b = new Image(); b.src = 'updater_revision/images/heavy_medal.jpg';		var c = new Image(); c.src = 'updater_revision/images/radio_new.jpg';		var d = new Image(); d.src = 'updater_revision/images/plaync_new.jpg';
+	//end image preloading
+	var i = 0;
+	
+	function slideshow(){
+		setInterval("change()", 2500);
+	}
+	
+	function change(){
+		if (pause == false && pix.length != 1){
+			document.images.pic.src = pix[i];
+			document.images.pic.alt = alts[i];
+			document.getElementById("eventLink").href = urls[i];
+			document.images.num.src = numbers[i];
+			document.getElementById("numLink").href = urls[i];
+			i++;
+			if (i > (pix.length - 1)) {i = 0}
+		}
+	}
+	document.oncontextmenu = function(){return false}
+	if(document.layers) {
+		window.captureEvents(Event.MOUSEDOWN);
+		window.onmousedown = function(e){
+			if(e.target==document)return false;
+		}
+	}
+	else {
+	document.onmousedown = function(){return false;}
+	}
+//-->
+</script>
+<style type="text/css">
+<!--
+	body {margin: 0px;}
+	a img {border:0px;}
+	a {text-decoration:none; color:#000000;}
+	a:hover{text-decoration:underline;}
+	body,td,th {font-family: Verdana, Arial, Helvetica, sans-serif;font-size: 12px;}
+	
+	#header {float:right; padding:7px 10px 0px;}
+	#patchBg {height:361px; width:640px; background:url(updater_revision/images/background.jpg) no-repeat; overflow:hidden;}
+	#event {height:138px; width:333px; overflow:hidden; position:absolute; left:301px; top:33px;}
+	#numbers{height:10px; width:80px; overflow:hidden; position:absolute; left:550px; top:173px; text-align:right;}	
+	#news_content{position:absolute; left:333px; top:206px; width:285px; height:59px;}
+	#news_content a, #patch_notes_content a{color:#FFFFFF;}
+	#patch_notes_content{position:absolute; left:333px; top:296px; width:285px; height:59px;}
+	
+	#newsMore, #devMore{position:absolute; top:187px; left:605px; width:25px; height:10px;}
+	#newsMore a, #devMore a{display:block; width:25px; height:10px; overflow:hidden;}
+	#devMore{top:276px;}
+-->
+</style>
+</head>
+
+<body onLoad="slideshow()" scroll="no" id="patchBg">
+  <div id="header"> <a href="http://www.lineage2.com" target="_new">Home</a> | <a href="http://www.lineage2.com/news/news.html" target="_new">News</a> | <a href="http://support.plaync.com/cgi-bin/plaync.cfg/php/enduser/std_alp.php?p_li=&p_page=1&p_cv=&p_pv=1.10%3B2.u0&p_prods=10%2C0&p_cats=0&p_hidden_prods=&prod_lvl1=10&prod_lvl2=0&cat_lvl1=0&p_search_text=&p_new_search=1" target="_new">Support</a> | <a href="https://secure.plaync.com/cgi-bin/plaync_manage.pl?game=lin2" target="_new">Account</a> </div>
+  <div id="event"><a href="http://www.lineage2.com/archive/2006/09/lineage_ii_remi.html" id="eventLink" onMouseOver="pause = true;" onMouseOut="pause = false;" target="_new"><img name="pic" src="updater_revision/images/remix_contest.jpg" width="333" height="138" alt="Lineage II Remix Contest"></a></div>
+  <div id="numbers"><a href="http://www.lineage2.com/archive/2006/09/lineage_ii_remi.html" id="numLink" onMouseOver="pause = true;" onMouseOut="pause = false;" target="_new"><img src="updater_revision/images/num_1.gif" alt="" name="num" width="9" height="9" /></a></div>
+  <div id="newsMore"><a href="http://www.lineage2.com/news/news.html" target="_new"></a></div>
+  <div id="devMore"><a href="http://www.lineage2.com/news/development.html" target="_new"></a></div>
+  <div id="news_content">
+	<script type="text/javascript" src="http://www.lineage2.com/news/patcher_news.js"></script>
+  </div>
+  <div id="patch_notes_content">
+	<script type="text/javascript" src="http://www.lineage2.com/news/indev_news.js"></script>
+  </div>
+</body>
+</html>

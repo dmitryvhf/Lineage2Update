@@ -7,7 +7,7 @@ namespace Lineage2UpdateApp
 {
     public partial class Form1 : Form
     {
-        const string downloadUrl = "http://localhost/update";
+        const string downloadUrl = "http://127.0.0.1:8080/live.htm"; // "http://localhost/update";
 
         public Form1()
         {

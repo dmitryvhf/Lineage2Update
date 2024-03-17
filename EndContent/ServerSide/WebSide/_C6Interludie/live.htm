@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0047)http://l2patcher.lineage2.com/updater/live.html -->
+<HTML xmlns="http://www.w3.org/1999/xhtml"><HEAD><TITLE>Lineage II Automatic Update</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META http-equiv=PRAGMA content=NO-CACHE>
+<META http-equiv=CACHE-CONTROL content=NO-CACHE>
+<META http-equiv=Expires content=-1>
+<SCRIPT language=javascript>
+<!--
+	var pix = new Array("updater_revision/images/int_fileplanet.jpg","updater_revision/images/int_launch_events.jpg","updater_revision/images/int_feature_notes.jpg","updater_revision/images/EU_promo.jpg");
+	var urls = new Array("http://www.fileplanet.com/promotions/lineage2/interlude/","http://www.lineage2.com/archive/2007/04/interlude_3.html","http://www.lineage2.com/news/interlude_01.html","http://www.lineage2.com/news/news.html#a008244");
+	var alts = new Array("FilePlanet","Interlude Launch Events","Interlude Feature Notes","Interlude - European Edition");
+	var numbers = new Array("updater_revision/images/num_1.gif", "updater_revision/images/num_2.gif", "updater_revision/images/num_3.gif", "updater_revision/images/num_4.gif");
+	var pause = false;
+	/* Image Preloading */
+	var a = new Image(); a.src = 'updater_revision/images/int_fileplanet.jpg';	var b = new Image(); b.src = 'updater_revision/images/int_launch_events.jpg';		var c = new Image(); c.src = 'updater_revision/images/int_feature_notes.jpg';		var d = new Image(); d.src = 'updater_revision/images/EU_promo.jpg';
+	//end image preloading
+	var i = 0;
+	
+	function slideshow(){
+		setInterval("change()", 2500);
+	}
+	
+	function change(){
+		if (pause == false && pix.length != 1){
+			document.images.pic.src = pix[i];
+			document.images.pic.alt = alts[i];
+			document.getElementById("eventLink").href = urls[i];
+			document.images.num.src = numbers[i];
+			document.getElementById("numLink").href = urls[i];
+			i++;
+			if (i > (pix.length - 1)) {i = 0}
+		}
+	}
+	document.oncontextmenu = function(){return false}
+	if(document.layers) {
+		window.captureEvents(Event.MOUSEDOWN);
+		window.onmousedown = function(e){
+			if(e.target==document)return false;
+		}
+	}
+	else {
+	document.onmousedown = function(){return false;}
+	}
+//-->
+</SCRIPT>
+
+<STYLE type=text/css>BODY {
+	MARGIN: 0px
+}
+A IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+A {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+BODY {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+TH {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+#corner {
+	Z-INDEX: 100; LEFT: 297px; WIDTH: 34px; POSITION: absolute; TOP: 29px; HEIGHT: 26px
+}
+#header {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 7px
+}
+#patchBg {
+	BACKGROUND: url(updater_revision/images/background_test.jpg) no-repeat; OVERFLOW: hidden; WIDTH: 640px; HEIGHT: 361px
+}
+#event {
+	LEFT: 301px; OVERFLOW: hidden; WIDTH: 333px; POSITION: absolute; TOP: 33px; HEIGHT: 138px
+}
+#numbers {
+	LEFT: 550px; OVERFLOW: hidden; WIDTH: 80px; POSITION: absolute; TOP: 173px; HEIGHT: 10px; TEXT-ALIGN: right
+}
+#news_content {
+	LEFT: 333px; WIDTH: 285px; POSITION: absolute; TOP: 206px; HEIGHT: 59px
+}
+#news_content DIV {
+	MARGIN-BOTTOM: 2px
+}
+#patch_notes_content DIV {
+	MARGIN-BOTTOM: 2px
+}
+#news_content A {
+	COLOR: #000
+}
+#patch_notes_content A {
+	COLOR: #000
+}
+#patch_notes_content {
+	LEFT: 333px; WIDTH: 285px; POSITION: absolute; TOP: 296px; HEIGHT: 59px
+}
+#newsMore {
+	LEFT: 605px; WIDTH: 25px; POSITION: absolute; TOP: 187px; HEIGHT: 10px
+}
+#devMore {
+	LEFT: 605px; WIDTH: 25px; POSITION: absolute; TOP: 187px; HEIGHT: 10px
+}
+#newsMore A {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 25px; HEIGHT: 10px
+}
+#devMore A {
+	DISPLAY: block; OVERFLOW: hidden; WIDTH: 25px; HEIGHT: 10px
+}
+#devMore {
+	TOP: 276px
+}
+</STYLE>
+
+<META content="MSHTML 6.00.6000.16414" name=GENERATOR></HEAD>
+<BODY id=patchBg scroll=no onload=slideshow()>
+<DIV id=header>
+<A href="http://www.lineage2.com/" target=_new>Home</A> | 
+<A href="http://www.lineage2.com/news/news.html" target=_new>News</A> | 
+<A href="http://www.plaync.com/us/support/prod_10.html" target=_new>Support</A> | 
+<A href="https://secure.plaync.com/cgi-bin/plaync_manage.pl?game=lin2" target=_new>Account</A>
+</DIV>
+<DIV id=corner><IMG height=26 src="updater_revision/images/corner.gif" width=34></DIV>
+<DIV id=event><A id=eventLink onmouseover="pause = true;" onmouseout="pause = false;" href="http://www.fileplanet.com/promotions/lineage2/interlude/" target=_new><IMG height=138 alt=FilePlanet src="updater_revision/images/int_fileplanet.jpg" width=333 name=pic></A></DIV>
+<DIV id=numbers><A id=numLink onmouseover="pause = true;" onmouseout="pause = false;" href="http://www.fileplanet.com/promotions/lineage2/interlude/" target=_new><IMG height=9 alt="" src="updater_revision/images/num_1.gif" width=9 name=num></A></DIV>
+<DIV id=newsMore><A href="http://www.lineage2.com/news/news.html" target=_new></A></DIV>
+<DIV id=devMore><A href="http://www.lineage2.com/news/development.html" target=_new></A></DIV>
+<DIV id=news_content>
+<SCRIPT src="updater_revision/patcher_news.js" type=text/javascript></SCRIPT>
+</DIV>
+<DIV id=patch_notes_content>
+<SCRIPT src="updater_revision/indev_news.js" type=text/javascript></SCRIPT>
+</DIV></BODY></HTML>

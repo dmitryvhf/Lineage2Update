@@ -1,0 +1,198 @@
+Lineage II web update tool
+without server service's
+
+Make by HellFire, Russia, Ekaterinburg, 2005-2007
+
++ add features
+* bug fix
+- remove features
+
+4.0.5.0	MD5: fd01df3c832cb46618b9c648e1c96ced
+	+ add support for simple checking of valid file in game folder for identify game version
+
+4.0.4.2 MD5: d27ad78dea10209f44fbe73ac4c7d713
+	* Hosts filter fixed. Symptoms: lost lines after using START button
+
+4.0.4.1	MD5: bb1bdd024b8ea69d287a050ba74bea48
+	* registry access fix
+
+4.0.4.0 MD5: 7d321ffe51ea6e911935cb1438d59f43
+	* tool show error "No support for old Windows" if not found 'hosts' file.
+	This fix fixed only if your 'hosts' file realy not exist. Tool create empty file in
+	'System32\Drivers\Etc' folder.
+	
+4.0.3.9 MD5: d8ae2559b60b1bb813c412a1fb97f914
+		* client crash if Registry Key LM\SOFTWARE\NCSoft not exist.
+		WARNING!! Always use license software. License - there is no hermorrhoids. (c)NCSoft
+
+4.0.3.8 MD5: 3b617899ca5900921b9973c1780e0efb
+		+ start support ftp
+
+4.0.3.6 MD5: 70a1ec4300642f5f7e4d26b0487af9a6
+		* fixed bug with static structure of l2update.lst file in [Setting] section.
+		 Now you can have empty lines, commentaries (// ... ) and old definitions.
+
+4.0.3.5 MD5: 69956ee5832e975b826b9986c73e0ab2
+		+ [Client Side] Remake update system. No JS file using. Now, updating works through 'Lineage2Update.new"
+		+ [Client Side] fix color for downloading status bar. Now it DarkRed color.
+		-*+ [Server Side]: change in [Self Update] section. Old format 'UpdateFileName UpdateFileMD5Hash' changed to
+			short UpdateFileMD5Hash. Changing compatible with old format (will be removing file name and tabs)
+
+4.0.3.4	+ add new param in [Settings] area
+			CustomUpdateFilesPath   http://..../
+		This param uses for downloading update files from different sources them root tool path.
+		This param dont affect to SelfUpdate path.
+		If CustomUpdateFilesPath is empty, them will be use main path from client Ini.
+			CustomUpdateFilesPath(TabSymbol)
+
+4.0.3.3	+ Add "Cronicles Interlude" design (server side files)
+		- removed buttons (Home, News, Support, Account) from serverside file "l2update.lst" because
+		all buttons defined in Html file. Now you can remove 4 urls from "l2update.lst" file. (see update 4.0.3.0)
+
+4.0.3.2	* small code issue in access to registry
+
+4.0.3.1	* "Gray Button" fix. Incorrect lock/unlock for buttons "Start" and "Check update"
+
+4.0.3.0 + Support thread for download process. Now you can break download process.
+			But you cant use START button, because client must be have full check.
+		+ Remove Url params from client INI file and add this params to server side.
+			(!) Server side: you need add 4 new string to [Settings] part (after UseGameGuardIP)
+				UrlHome	http://
+				UrlNews	http://
+				UrlSupport	http://
+				UrlAccount	http://
+		How to do upgrade:
+		1) remove 4 url lines from client Lineage2Update.ini on server side
+		2) add 4 url lines to l2update.lst on server side
+		3) upload new Lineage2Update.exe.cab
+		4) change new md5 hash into l2update.lst on server side
+
+4.0.2.4 * client error if server file have incorrect value for update section
+
+4.0.2.3 * remake update file. Script 'update.js' fixed.
+
+4.0.2.2	* remake update file. New JS script 'update.js'
+
+4.0.2.1	+ Client-side: Error dialog and crash if update file on client side have "read-only" attribute.
+
+4.0.2.0	+ Client-side: Error dialog if file Hosts not found in search directory or permission denied for
+			any writing operations with this.
+		+ Server-side: "ServerAuthIP" parameter remove to server-side. Remove this parameter in client file.
+			Server side value will be replace file value after loading.
+		New value, format: ServerIP[TAB]IP
+		+ Server-side: Add new address's for GameGuard Server Emulator host to Hosts file. 
+			l2testauthd.lineage2.com
+			nprotect.ncsoft.co.kr
+			nprotect.lineage2.com
+		New value, format:	GameGuardIP[TAB]IP
+					UseGameGuardIP[TAB][0..1]
+							
+		Use 'UseGameGuardIP 1' for add nProtect IP's to Hosts, or '0' for leave as is.
+		
+		Thanks for report and recomendation to 'Sentryx'
+
+4.0.1.1	* Fix checking OS version. Symptoms: error "Old windows sux" for good system in good folder.
+		+ Impower update engine 
+
+4.0.1.0	+ New section [Settings]:
+			+ custom file for "Start" action (custom settings/server side)
+			+ check files always on tool start (custom settings/server side)
+			+ close/leave updater after Start action (custom settings/server side)
+
+4.0.0.0		Redesigned for Cronicles 5 Updater
+
+3.0(5).72.0	* regional setting fix again. change date storage format to universal binary
+			comment: change your update webserver config file l2update.lst for support
+
+3.0(5).71.0	- remove some copyright messages from tool window
+
+3.0(5).7.0	+ support connection through proxy with autotization
+			(set HKEY_LOCAL_MACHINE\SOFTWARE\NCSoft\Lineage2UpdateProxyReqAuth key to "1" for auth
+			key create automaticaly if have "Lineage2UpdateProxy" key)
+
+3.0(5).6.2	+ Support Windows9x for changing Hosts file ([Drive]:\WINDOWS\Hosts)
+			* Support Windows decompressor on Windows9x (extract.exe)
+
+Last stable approved release.
+
+3.0(5).6.1	* FlawersCrack fix. Symptom: game start but cant connect to server. Can, if you start
+		L2.exe from game directory manualy
+
+3.0(5).6.0	+ Optimize code
+
+3.0(5).5.9	+ Self AutoUpdate system
+		+ Change webserver update config structure
+		* incorrect download message
+
+3.0.5.8	* DateTime correction. Known correct dateTime format:
+		23.03.2006 11:07:00
+		23/4/2006 7:57:17 PM
+		February 12, 1969 7:57:17 PM
+		* Error of loading of a file of greater, than ~21Mb
+	
+
+3.0.5.7	* registry access fix
+	* proxy access fix
+	* file access fix
+
+3.0.5.5	* registry access
+
+3.0.5.4	+* disable cache through proxy
+			+ support connection through proxy
+			(HKEY_LOCAL_MACHINE\SOFTWARE\NCSoft\Lineage2UpdateProxy key in registry)
+
+3.0.5.3	+* delete temporary files
+			+* delete old file before patching
+
+3.0.5.2	* replace position progress bar's (file and overall progress)
+
+
+3.0.5	critical fix. 
+	symptoms: 
+	* no all files download from site 
+	* error (out of boundary array) on step starting tool 
+	+ compatible non-standart encoding on webservers
+
+3.0.3	01 Mar 2006
+	* fix double image, if you use image in news.htm
+	+ add retail C4 background image
+	+ new download engine. Now no use IE engine and can see download status
+
+3.0.2	27 Feb 2006
+	* remove messages with my project name :) 
+	+ ini file have identify names for better setting
+	* fix server_ip_fixer module for 'hosts' file. Sometimes it no work good.
+	+ add 'ServerIP' option to ini-file (read tutorial for info about this features)
+	+ change format of date update. Now it full date and time. Support updates to each
+	minute, now :)
+
+3.0.0	start project with ini config file
+
+
+--------------
+Lineage II web update tool, add-on HttpUpdateGenerator
+
+Make by HellFire, Russia, Ekaterinburg, 2005-2006
+
++ add features
+* bug fix
+- remove features
+
+2.0.10	+ add MD5 generator for single file	
+
+2.0.9	+ support new values in [Setting] section for 4.0.2.0 version release
+		ServerAuthIP
+		GameGuardIP
+		UseGameGuardIP
+		+ add generator for Date/Time binary code	
+
+2.0.8	+ support new section [Settings] in 'l2updater.lst'
+
+2.0.7	+ support LineageIIUpdate 3.0.7.2 version release
+
+2.0.6	+ support LineageIIUpdate 3.0.6 version release
+
+2.0.1	+ generate full date-time string. Support each minute updates, now :)
+	+ add empty part for full update ("Full Check" feature)
+
+2.0.0	start project with ini config file
