@@ -1,7 +1,7 @@
 # Lineage2Update
 Lineage II Client Updater tool.
 
-![Lineage2Update demo screen](https://github.com/dmitryvhf/Lineage2Update/Docs/Images/LineageIIUpdate-demo.png)
+![Lineage2Update demo screen](https://github.com/dmitryvhf/Lineage2Update/blob/master/Docs/Images/LineageIIUpdate-demo.png)
 
 ## Features
 Client self-update support.  
