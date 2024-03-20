@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.Json.Serialization;
 
 namespace Lineage2UpdateApp.Models.Configuration
 {
@@ -10,26 +11,13 @@ namespace Lineage2UpdateApp.Models.Configuration
         /// <summary>
         ///     Config version
         /// </summary>
+        [JsonRequired]
         public required int Version { get; init; }
 
         /// <summary>
-        ///     Remote address of update storage
+        ///     Remote address of update storage base path
         /// </summary>
-        public required Uri UpdateUrl { get; init; }
-
-        public bool Validate()
-        {
-            if (Version <= 0)
-            {
-                return false;
-            }
-
-            if (UpdateUrl == null)
-            {
-                return false;
-            }
-
-            return true;
-        }
+        [JsonRequired]
+        public required Uri UpdateBasePath { get; init; }
     }
 }

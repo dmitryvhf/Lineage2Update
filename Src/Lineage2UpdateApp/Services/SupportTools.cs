@@ -20,13 +20,11 @@ namespace Lineage2UpdateApp.Services
         ///     Read and deserialize JSON file
         /// </summary>
         /// <typeparam name="T">Target type</typeparam>
-        /// <param name="filePath">JSON file fullpath</param>
+        /// <param name="content">JSON content</param>
         /// <returns>Deserialized object; null - error</returns>
-        internal static T? Deserialize<T>(string filePath)
+        internal static T? Deserialize<T>(string content)
         {
-            string rawJson = System.IO.File.ReadAllText(filePath);
-
-            return System.Text.Json.JsonSerializer.Deserialize<T>(rawJson);
+            return System.Text.Json.JsonSerializer.Deserialize<T>(content);
         }
 
         /// <summary>

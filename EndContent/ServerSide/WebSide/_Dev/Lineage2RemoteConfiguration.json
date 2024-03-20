@@ -1,5 +1,6 @@
 {
     "Settings": {
+        "Index": "live.htm",
         "ProductExec": "System\\L2.exe",
         "CloseAfterStart": false,
         "ForceChecking": false,
