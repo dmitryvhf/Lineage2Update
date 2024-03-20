@@ -1,0 +1,20 @@
+{
+    "Settings": {
+        "ProductExec": "System\\L2.exe",
+        "CloseAfterStart": false,
+        "ForceChecking": false,
+        "AuthServer": "127.0.0.1"
+    },
+    "Update": {
+        "Time": "2024-03-20T01:12:00",
+        "Self": "6cba995c2129133649f69f8d29377ddf",
+        "Critical": {
+            "system\\commandname-e.dat": "fe9b73549d7cffbb352c87580e9929f0"
+        },
+        "Full": {
+            "system\\ActionName-e.dat": "fd2cd52248fb134a2c620d56e79e56f5",
+            "system\\ALAudio.int": "59eacad27cf1197c12736ca87d0b48e4",
+            "system\\commandname-e.dat": "fe9b73549d7cffbb352c87580e9929f0"
+        }
+    }
+}
